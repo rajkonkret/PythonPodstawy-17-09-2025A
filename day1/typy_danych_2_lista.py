@@ -106,3 +106,32 @@ print(lista_copy)  # ['Roman', 'Tomek', 'Marek']
 print(id(lista))  # 2157460169728
 print(id(lista2))  # 2157460169728
 print(id(lista_copy))  # 2970338756736
+
+liczby = [54, 999, 34, 22, 12.34, 567]
+print(liczby)  # [54, 999, 34, 22, 12.34, 567]
+print(type(liczby))  # <class 'list'>
+
+liczby.sort()  # zmiana oryginału
+print(liczby)  # [12.34, 22, 34, 54, 567, 999]
+liczby.sort(reverse=True)
+print(liczby)  # [999, 567, 54, 34, 22, 12.34]
+
+liczby = [54, 999, 34, 22, 12.34, 567, "A"]
+print(liczby)  # [54, 999, 34, 22, 12.34, 567, 'A']
+print(type(liczby))  # <class 'list'>
+# liczby.sort() # TypeError: '<' not supported between instances of 'str' and 'int'
+
+lista_copy.reverse()  # tylko odwrócenie
+print(lista_copy)  # ['Marek', 'Tomek', 'Roman']
+
+# rozpakowanie sekwencji
+tekst = "Pyth on."
+lista1 = list(tekst)
+print(lista1)  # ['P', 'y', 't', 'h', ' ', 'o', 'n', '.']
+
+lista2 = [tekst]
+print(lista2)  # ['Pyth on.']
+
+krotka = tuple(lista1)
+print(type(krotka))  # <class 'tuple'>
+print(krotka)  # ('P', 'y', 't', 'h', ' ', 'o', 'n', '.')
