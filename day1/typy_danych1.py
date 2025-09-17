@@ -55,3 +55,29 @@ print(bool("Radek"))  # True
 
 print(bool(""))  # False
 print(bool(None))  # None, nic, stan nieokreslony, odpowiednik null
+
+# and - i
+print(True and False)  # False
+print(True and True)  # True
+
+# or - lub
+print(True or False)  # True
+print(True or True)  # True
+print(False or False)  # False
+
+# not - negacja
+print(not True)
+print(not False)
+# False
+# True
+
+a = 7
+b = 89
+
+print(f'Porównanie {a} > {b} = {a > b}')  # Porównanie 7 > 89 = False
+print(f'Porównanie {a} < {b} = {a < b}')  # Porównanie 7 < 89 = True
+print(f'Porównanie {a} >= {b} = {a >= b}')  # Porównanie 7 >= 89 = False
+print(f'Porównanie {a} <= {b} = {a <= b}')  # Porównanie 7 <= 89 = True
+print(f'Porównanie {a} == {b} = {a == b}')  # Porównanie 7 == 89 = False
+print(f'Porównanie {a} != {b} = {a != b}')  # Porównanie 7 != 89 = True
+print(f"Porównanie {a == b = }")  # Porównanie a == b = False
