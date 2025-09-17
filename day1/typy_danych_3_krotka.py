@@ -30,3 +30,36 @@ del tupla_liczby  # skasowanie calej tupli
 
 print(tupla_imiona.index("Radek"))  # indeks 0
 print(tupla_imiona.count("Radek"))  # występuje 1 raz
+
+tup = 1, 2
+print(type(tup))  # <class 'tuple'>
+a, b = 1, 2
+print(a, b)  # 1 2
+
+# rozpakowanie tupli
+a, b = tup
+print(a, b)  # 1 2
+
+tup2 = 1, 2, 3
+# a, b = tup2  # ValueError: too many values to unpack (expected 2)
+a, *b = tup2  # * worek na dane (kolekcja)
+print(a, b)  # 1 [2, 3]
+
+print(tupla_imiona)  # ('Radek', 'Tomek', 'Zenek', 'Roman')
+# name1, name2, name3
+
+name1, name2, *name3 = tupla_imiona
+print(name1, name2, name3)  # Radek Tomek ['Zenek', 'Roman']
+
+name1, *name2, name3 = tupla_imiona
+print(name1, name2, name3)  # Radek ['Tomek', 'Zenek'] Roman
+
+*name1, name2, name3 = tupla_imiona
+print(name1, name2, name3)  # ['Radek', 'Tomek'] Zenek Roman
+
+print(sorted(tupla_imiona))  # ['Radek', 'Roman', 'Tomek', 'Zenek'], zwrócił listę
+print(tupla_imiona)  # ('Radek', 'Tomek', 'Zenek', 'Roman'), krotka się nie zmieni, jest niemutowalna
+
+lista_z_tupli = list(tupla_imiona)
+print(lista_z_tupli)  # ['Radek', 'Tomek', 'Zenek', 'Roman']
+print(type(lista_z_tupli))  # <class 'list'>
