@@ -75,3 +75,9 @@ for i in range(10, 0, -3):
 # 7
 # 4
 # 1
+
+for c in lista3:
+    if c == 2:
+        c += 1
+        print(c)  # tylko dla c==2
+    print("Za każdym przejściem pętli")
