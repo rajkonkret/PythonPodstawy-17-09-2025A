@@ -78,18 +78,37 @@ rabat = 25 if sum_zam > 100 else 0  # operator warunkowy
 print("Rabat wynosi:", rabat)  # Rabat wynosi: 25
 
 # napisac test z...
-punkty = 0
-odp = input("Podaj datę Chrztu Polski")
-if odp == '966':
-    print("Dobrze")
-    # punkty = punkty + 1
-    punkty += 1
-else:
-    print("Musisz jescze poczytać")
-
-print("Punkty:", punkty)
+# punkty = 0
+# odp = input("Podaj datę Chrztu Polski")
+# if odp == '966':
+#     print("Dobrze")
+#     # punkty = punkty + 1
+#     punkty += 1
+# else:
+#     print("Musisz jescze poczytać")
+#
+# print("Punkty:", punkty)
 # spam += 1    spam = spam + 1
 # spam -= 1    spam = spam - 1
 # spam *= 1    spam = spam * 1
 # spam /= 1    spam = spam / 1
 # spam %= 1    spam = spam % 1
+
+alert_system = "email"
+error_level = "error"
+lista_b = []
+
+if alert_system == "console":
+    print("Stało się coś strasznego")
+elif alert_system == "email":
+    print("System email")
+    if error_level == "error":
+        lista_b.append("Krytyczny")
+    elif error_level == "medium":
+        lista_b.append("Ostrzeżenie")
+    else:
+        lista_b.append("Inny błąd")
+else:
+    print('inny system')
+
+print("Lista błędów:", lista_b)  # Lista błędów: ['Krytyczny']
