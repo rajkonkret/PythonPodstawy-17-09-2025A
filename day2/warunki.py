@@ -52,16 +52,44 @@ if (n := len(a)) > 3:
     # Długośc wynosi: 5, więcej niż 3
 
 # kolejność ma znaczenie
-podatek = 0
-zarobki = int(input("podaj zarobki"))
-if zarobki < 10_000:
-    podatek = 0
-elif zarobki < 40_000:
-    podatek = 0.2
-elif zarobki < 100_000:
-    podatek = 0.4
-else:  # wszystko inne
-    podatek = 0.9  # 90%
+# podatek = 0
+# zarobki = int(input("podaj zarobki"))
+# if zarobki < 10_000:
+#     podatek = 0
+# elif zarobki < 40_000:
+#     podatek = 0.2
+# elif zarobki < 100_000:
+#     podatek = 0.4
+# else:  # wszystko inne
+#     podatek = 0.9  # 90%
+#
+# print(f"Podatek wynosi {podatek * zarobki} pln.")
+# # 0.2 dla przedziału od 10000 do 39999
 
-print(f"Podatek wynosi {podatek * zarobki} pln.")
-# 0.2 dla przedziału od 10000 do 39999
+sum_zam = 150
+if sum_zam > 100:
+    rabat = 25
+else:
+    rabat = 0
+print("Rabat wynosi:", rabat)
+# Rabat wynosi: 25
+
+rabat = 25 if sum_zam > 100 else 0  # operator warunkowy
+print("Rabat wynosi:", rabat)  # Rabat wynosi: 25
+
+# napisac test z...
+punkty = 0
+odp = input("Podaj datę Chrztu Polski")
+if odp == '966':
+    print("Dobrze")
+    # punkty = punkty + 1
+    punkty += 1
+else:
+    print("Musisz jescze poczytać")
+
+print("Punkty:", punkty)
+# spam += 1    spam = spam + 1
+# spam -= 1    spam = spam - 1
+# spam *= 1    spam = spam * 1
+# spam /= 1    spam = spam / 1
+# spam %= 1    spam = spam % 1
