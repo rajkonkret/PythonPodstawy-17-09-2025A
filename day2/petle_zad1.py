@@ -81,3 +81,93 @@ for c in lista3:
         c += 1
         print(c)  # tylko dla c==2
     print("Za każdym przejściem pętli")
+
+imiona = ["Radek", "Tomek", "Zenek", "Ania"]
+print(imiona)
+print(type(imiona))  # <class 'list'>
+
+for p in imiona:
+    print(p)
+# Radek
+# Tomek
+# Zenek
+# Ania
+
+# 0 Radek
+for i in range(len(imiona)):  # generujemy po kolei indeksy
+    print(i, imiona[i])
+# 0 Radek
+# 1 Tomek
+# 2 Zenek
+# 3 Ania
+
+for p in imiona:
+    print(imiona.index(p), p)
+# 0 Radek
+# 1 Tomek
+# 2 Zenek
+# 3 Ania
+
+# enumerate() - numeruje kolekcje i zwraca numer i element kolekcji
+for i in enumerate(imiona):
+    print(i)
+# (0, 'Radek') krotka
+# (1, 'Tomek')
+# (2, 'Zenek')
+# (3, 'Ania')
+i, o = (3, 'Ania')
+for i, o in enumerate(imiona):  # rozpakowanie krotki w locie
+    print(i, o)
+# 0 Radek
+# 1 Tomek
+# 2 Zenek
+# 3 Ania
+for i, o in enumerate(imiona, start=1):  # rozpakowanie krotki w locie
+    print(i, o)
+# 1 Radek
+# 2 Tomek
+# 3 Zenek
+# 4 Ania
+
+# imiona = ["Radek", "Tomek", "Zenek", "Ania"]
+imiona = ["Radek", "Tomek", "Zenek", "Ania", "Aga"]
+wiek = [45, 65, 34, 20]
+
+# Radek 45
+# for p in imiona:
+#     print(p, wiek[imiona.index(p)])
+# Radek 45
+# Tomek 65
+# Zenek 34
+# Ania 20
+# IndexError: list index out of range, dla różnych długości list
+
+# zip() - łączenie kolekcji
+for i in zip(imiona, wiek):
+    print(i)
+# ('Radek', 45)
+# ('Tomek', 65)
+# ('Zenek', 34)
+# ('Ania', 20)
+for o, w in zip(imiona, wiek):
+    print(o, w)
+# Radek 45
+# Tomek 65
+# Zenek 34
+# Ania 20
+
+# 0 Radek 44
+for i in enumerate(zip(imiona, wiek)):
+    print(i)
+# (0, ('Radek', 45))
+# (1, ('Tomek', 65))
+# (2, ('Zenek', 34))
+# (3, ('Ania', 20))
+(a, (b, c)) = (3, ('Ania', 20))
+print(a, b, c)  # 3 Ania 20
+for i, (o, w) in enumerate(zip(imiona, wiek)):
+    print(i, o, w)
+# 0 Radek 45
+# 1 Tomek 65
+# 2 Zenek 34
+# 3 Ania 20
