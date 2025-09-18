@@ -51,6 +51,7 @@ if (n := len(a)) > 3:
     print(f"Długośc wynosi: {n}, więcej niż 3")
     # Długośc wynosi: 5, więcej niż 3
 
+# kolejność ma znaczenie
 podatek = 0
 zarobki = int(input("podaj zarobki"))
 if zarobki < 10_000:
