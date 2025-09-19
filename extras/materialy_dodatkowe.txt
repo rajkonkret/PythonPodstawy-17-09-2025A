@@ -124,4 +124,5 @@ https://pl.altapps.net/soft/hackerrank-com
 https://naukapythona.com.pl/?
 https://naukajava.online/
 
- pip freeze > requirements.txt
+pip freeze > requirements.txt
+pip install -r .\requirements.txt
