@@ -34,3 +34,4 @@ print(data['rates'])
 # ]
 print(data['rates'][0])  # {'no': '182/A/NBP/2025', 'effectiveDate': '2025-09-19', 'mid': 3.6278}
 print(data['rates'][0]['mid'])  # 3.6278
+# https://api.chucknorris.io/
