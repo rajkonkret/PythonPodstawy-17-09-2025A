@@ -3,15 +3,18 @@
 def liczby(name=None, *cyfry):  # * dowolną ilośc danych pozycyjnych
     print(cyfry)
     count = len(cyfry)
+    suma_p = sum(cyfry)
     suma = 0
     try:
         for c in cyfry:
             suma += c
         avg = suma / count
+        avg_p = suma_p / count
     except Exception as e:
         print("Bład:", e)
     else:
         print(f"Średnia dla ucznia {name} wynosi: {avg}")
+        print(f"Średnia dla ucznia {name} wynosi: {avg_p}")
     finally:
         print("Kolejny uczen")
 
