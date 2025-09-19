@@ -123,3 +123,5 @@ https://www.hackerrank.com/domains/python
 https://pl.altapps.net/soft/hackerrank-com
 https://naukapythona.com.pl/?
 https://naukajava.online/
+
+ pip freeze > requirements.txt
